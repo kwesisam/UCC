@@ -1,0 +1,44 @@
+( 1 )  East Gate
+                    ( 2 )  Farm Land
+                    ( 3 )  West Gate
+                    ( 4 )  GCB
+                    ( 5 )  KNH
+                    ( 6 )  Valco Hall
+                    ( 7 )  ATL office
+                    ( 8 )  Vice Challen
+                    ( 9 )  Casford Hall
+                    ( 10 ) Prudential Bank
+                    ( 11 ) Valco Trust Hall
+                    ( 12 ) Sasakwa
+                    ( 13 ) SSNIT Hotel
+                    ( 14 ) UPSHA
+                    ( 15 ) Sam Jonah Library
+                    ( 16 ) CANS Block
+                    ( 17 ) G-Block
+                    ( 18 ) New Admistration Block (New Site)
+                    ( 19 ) CODE
+                    ( 20 ) Science Market
+                    ( 21 ) Parliament House
+                    ( 22 ) LLT
+                    ( 23 ) LT
+                    ( 24 ) CALC
+                    ( 25 ) NEC
+                    ( 26 ) MIS
+                    ( 27 ) Amissah Arthur Language Center
+                    ( 28 ) Institution Of Eduction
+                    ( 29 ) NLT
+                    ( 30 ) School Of Business
+                    ( 31 ) PHD lecture Hall
+                    ( 32 ) Sandwich Lecture Theater
+                    ( 33 ) University Primary and KG
+                    ( 34 ) University JHS
+                    ( 35 ) Sport Complex
+                    ( 36 ) Taxi rank (old site)
+                    ( 37 ) Old Administration block (old site)
+                    ( 38 ) Oguaa Hall
+                    ( 39 ) Adeyhe hall
+                    ( 40 ) ATL
+                    ( 41 ) SRC Hall
+                    ( 42 ) Superanuation Hall
+                    ( 43 ) PSI Hall
+                    ( 44 ) University Hall

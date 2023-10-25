@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "38812387117",
+    "firebase_url": "https://unidrive-392320-default-rtdb.firebaseio.com",
+    "project_id": "unidrive-392320",
+    "storage_bucket": "unidrive-392320.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:38812387117:android:30fa2cb7ef8d6e2c4075a4",
+        "android_client_info": {
+          "package_name": "com.example.unidriveprototype"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "38812387117-em2aavvsistnu763lmdofo66ru1ing1e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.unidriveprototype",
+            "certificate_hash": "cf3649bcfd2ae35baa8f2de383b2aca27713cdd0"
+          }
+        },
+        {
+          "client_id": "38812387117-qikcblqsf7ss2aahds3djsbcc7r81ch4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvuDTU2TORl41ayJeoOZcTXqsQmIoMU7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "38812387117-qikcblqsf7ss2aahds3djsbcc7r81ch4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

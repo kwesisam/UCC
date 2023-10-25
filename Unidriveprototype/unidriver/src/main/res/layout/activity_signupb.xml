@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".signupb">
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="657dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address: Street address, City, State, ZIP code"/>
+
+            <!-- You can use the device's GPS to fetch geolocation automatically, so no input field is needed for this. -->
+
+            <EditText
+                android:id="@+id/editTextServiceArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Service Area: Specify the regions or cities you cover"/>
+            <EditText
+                android:id="@+id/editTextAccountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bank Account Number"/>
+
+            <EditText
+                android:id="@+id/editTextAccountHolderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Account Holder Name"/>
+
+            <EditText
+                android:id="@+id/editTextBankName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bank Name"/>
+
+            <EditText
+                android:id="@+id/editTextBranchAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Branch Address"/>
+
+            <EditText
+                android:id="@+id/editTextPaymentPreferences"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Payment Preferences: How do you wish to receive payments?"/>
+            <EditText
+                android:id="@+id/editTextBackgroundCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Background Check: Provide details for background screening process (if required)"/>
+
+            <EditText
+                android:id="@+id/editTextRequiredDocuments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Required Documents: List any additional documents or certifications needed for the transportation service"/>
+            <CheckBox
+                android:id="@+id/checkBoxAgreeTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I have read and agree to the Terms and Conditions" />
+
+            <TextView
+                android:id="@+id/textViewPrivacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy"
+                android:textStyle="bold"
+
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Add other fields and layout elements as needed -->
+
+            <!-- Profile Picture -->
+            <ImageView
+                android:id="@+id/imageViewProfilePicture"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="Profile Picture"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verification Process Steps:"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Step 1: Manual Review of Information"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Step 2: Document Validation (e.g., Driver's License)"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Step 3: Background Screening (if applicable)"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,242 @@
+   /* private GoogleMap mMap;
+    private FragmentManager supportFragmentManager;
+    private LocationManager locationManager;
+    private LocationListener locationListener;
+    private double latitude;
+    private double longitude;*/
+
+
+    /*SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+            if (mapFragment == null) {
+                mapFragment = SupportMapFragment.newInstance();
+                FragmentManager fragmentManager = getChildFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.add(R.id.map, mapFragment).commit();
+            }*/
+            Context context = requireContext();
+            locationManager = (LocationManager) requireContext().getSystemService(Context.LOCATION_SERVICE);
+
+            if (locationManager != null) {
+               // boolean isGpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+                checkLocation();
+
+                // Use the isGpsEnabled value as needed.
+            } else {
+                // Handle the case where locationManager is null.
+            }
+
+     void  checkLocation(){
+
+            if(ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+                showLocationBox();
+            }else{
+                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+            }
+
+
+        }
+
+        private void showLocationBox() {
+            boolean isGpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+
+            if(isGpsEnabled){
+                System.out.println("zzzzzzzzzzzzz");
+                getLocation();
+            }else{
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle("Enable Location")
+                        .setMessage("Location access is required. Please enable location services.")
+                        .setPositiveButton("Enable", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                openLocationSettings();
+                            }
+                        })
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        })
+                        .setCancelable(false)
+                        .show();
+            }
+        }
+        private void openLocationSettings() {
+            Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+            startActivity(intent);
+        }
+
+
+        public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+            if (requestCode == 1) {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // Location permission granted, proceed with location-related operations
+                    showLocationEnabledDialog();
+                } else {
+                    // Location permission denied, handle denial gracefully (e.g., show alternative options or instructions)
+                    showLocationPermissionDeniedDialog();
+                }
+            }
+        }
+        private void showLocationPermissionDeniedDialog() {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+            builder.setTitle("Permission Denied")
+                    .setMessage("Location permission is required to access your current location.")
+                    .setPositiveButton("Settings", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                            openAppSettings();
+                        }
+                    })
+                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .setCancelable(false)
+                    .show();
+        }
+        private void openAppSettings() {
+            Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+            Uri uri = Uri.fromParts("package", getContext().getPackageName(), null);
+            intent.setData(uri);
+            startActivity(intent);
+        }
+        private void showLocationEnabledDialog() {
+            //LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+            //boolean isLocationEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+            boolean isGpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+
+            if (isGpsEnabled) {
+                // Location is already enabled, proceed with location-related operations
+                // ...
+                System.out.println("gps is enabled");
+                getLocation();
+            } else {
+                // Location is disabled, show a dialog to prompt the user to enable it
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle("Enable Location")
+                        .setMessage("Location access is required. Please enable location services.")
+                        .setPositiveButton("Enable", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                openLocationSettings();
+                            }
+                        })
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        })
+                        .setCancelable(false)
+                        .show();
+            }
+        }
+
+        private void getLocation() {
+            // Code to retrieve the location
+          /*  if (checkLocationPermissions()) {
+                // Request location updates
+                // ...
+                // Once you have the location, log the latitude and longitude
+                double latitude = 0.0; // Replace with actual latitude value
+                double longitude = 0.0; // Replace with actual longitude value
+                String location = "Latitude: " + latitude + "\nLongitude: " + longitude;
+                a.setText(location);
+            } else {
+                requestLocationPermissions();
+            }*/
+            if (checkLocationPermissions()) {
+
+                if(ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                    locationManager = (LocationManager) requireContext().getSystemService(Context.LOCATION_SERVICE);
+                    if (locationManager != null) {
+                        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new LocationListener() {
+                            @Override
+                            public void onLocationChanged(Location location) {
+                                // Called when the user's location changes
+                                LatLng userLocation = new LatLng(location.getLatitude(), location.getLongitude());
+
+                                latitude = location.getLatitude();
+                                longitude = location.getLongitude();
+                                //
+                            }
+
+                            @Override
+                            public void onStatusChanged(String provider, int status, Bundle extras) {
+                            }
+
+                            @Override
+                            public void onProviderEnabled(String provider) {
+                            }
+
+                            @Override
+                            public void onProviderDisabled(String provider) {
+                            }
+                        });
+                    }
+                }
+
+               /* locationListener = new LocationListener() {
+                    @Override
+                    public void onLocationChanged(@NonNull Location location) {
+                         latitude = location.getLatitude();
+                         longitude = location.getLongitude();
+                        String locationStr = "Latitude: " + latitude + "\nLongitude: " + longitude;
+                        System.out.println(locationStr);
+                        //onStop();
+                    }
+                    @Override
+                    public void onStatusChanged(String provider, int status, Bundle extras) {
+                    }
+
+                    @Override
+                    public void onProviderEnabled(String provider) {
+                    }
+
+                    @Override
+                    public void onProviderDisabled(String provider) {
+                    }
+                };
+                try {
+                    locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1, 1, locationListener);
+                } catch (SecurityException e) {
+                    e.printStackTrace();
+                }*/
+            } else {
+                requestLocationPermissions();
+            }
+
+
+        }
+        private boolean checkLocationPermissions() {
+            int fineLocationPermission = ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION);
+            int coarseLocationPermission = ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION);
+            return fineLocationPermission == PackageManager.PERMISSION_GRANTED
+                    && coarseLocationPermission == PackageManager.PERMISSION_GRANTED;
+        }
+
+        private void requestLocationPermissions() {
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},
+                    1);
+        }
+        public void onStop() {
+            super.onStop();
+            if (locationManager != null && locationListener != null) {
+                try {
+                    locationManager.removeUpdates(locationListener);
+                } catch (SecurityException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+

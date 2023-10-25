@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+
+    tools:context=".signupa">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First name"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editTextFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"/>
+
+            <TextView
+                android:id="@+id/signupa_firstnameerror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/editTextLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"/>
+            <TextView
+                android:id="@+id/signupa_lastnameerror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Birth Date"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/editTextDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Eg. 2003/05/21"
+                android:inputType="text"/>
+
+
+            <TextView
+                android:id="@+id/signupa_birthdayerror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other"/>
+            </RadioGroup>
+            <TextView
+                android:id="@+id/signupa_gendererror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+
+
+                <!-- Contact Information -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone number"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="phone"/>
+            <TextView
+                android:id="@+id/signupa_phoneerror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/editTextEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"/>
+            <TextView
+                android:id="@+id/signupa_emailerror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Drivers License Number"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/editTextLicenseNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Driver's License Number"/>
+            <TextView
+                android:id="@+id/sigupa_licenseerror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="License Expiration Date"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/editTextExpiryDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Eg. 2022/03/30"
+                android:inputType="text"/>
+
+
+
+            <TextView
+                android:id="@+id/signupa_licensedateerror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registration Number"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/editTextVehicleRegistrationNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Vehicle Registration Number"/>
+
+            <TextView
+                android:id="@+id/signupa_registrationnumbererror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Car model and make"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/editTextVehicleMakeModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Make and Model of the Vehicle"/>
+
+            <TextView
+                android:id="@+id/signupa_makeandmodelerror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manufacturing Date"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/signupa_yearofmanufacture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Year of Manufacture"
+                android:inputType="number"/>
+            <TextView
+                android:id="@+id/signupa_manufacturedateerror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Insurance Company Name"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/editTextInsuranceCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Insurance Company Name"/>
+
+            <TextView
+                android:id="@+id/signupa_insurancenameerror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Policy Number"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editTextPolicyNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Policy Number"/>
+
+            <TextView
+                android:id="@+id/signupa_policynumbererror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Insurance Expiration Date"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="*"
+                    android:textColor="#F30E0E"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/editTextInsuranceExpiryDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Insurance Expiry Date"
+                android:inputType="date"/>
+
+            <TextView
+                android:id="@+id/signupa_insuranceexpiryerror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC1F1F"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="next"
+                android:id="@+id/signupa_next"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

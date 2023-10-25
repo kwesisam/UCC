@@ -1,0 +1,63 @@
+<!-- fragment_maps.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/container_whereto"
+        >
+
+
+    <!--where to button-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/whereto_btn"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+
+        >
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/dreamville"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Where to?"
+        android:textSize="20dp"
+        android:layout_marginStart="10dp"
+        />
+
+    </LinearLayout>
+    </LinearLayout>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+
+        />
+
+</RelativeLayout>
+<!--
+<Fragment xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/map"
+tools:context=".F1"
+android:name="com.google.android.gms.maps.SupportMapFragment" />-->
+
+
+
+
