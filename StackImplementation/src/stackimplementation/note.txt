@@ -1,0 +1,53 @@
+        /*JPanel section1 = new JPanel();
+        JTextField textfield = new JTextField(20);
+        textfield.setText("sfsafasf");
+
+        textfield.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(textfield.getText());
+            }
+
+        });
+        section1.add(textfield);
+        /*JPanel section2 = new JPanel();
+        section1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        section1.setBackground(Color.gray);
+
+        JLabel label = new JLabel("My Cool App");
+        label.setForeground(Color.white);
+        section1.add(label);
+
+        JButton button = new JButton("Click me");
+        button.setFocusCycleRoot(false);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("button clicked");
+                label.setText("<html>Hello world <br> change</html>");
+            }
+
+        });
+
+        section2.add(button);
+
+        /*for(int i = 0; i < 5; i++){
+            JButton button = new JButton(Integer.toString(i));
+            section1.add(button);
+        }
+        window.add(section1, BorderLayout.NORTH);*/
+        window.add(section1, BorderLayout.NORTH);
+        //window section
+        /*section = new JPanel();
+        section.setLayout(new FlowLayout(FlowLayout.CENTER,10,5));
+        section.setBackground(Color.red);
+        section.setPreferredSize(new Dimension(250,250));
+        //creating button
+        Button button = new Button("Button");
+        
+        
+        //adding button to the section
+        section.add(button);
+        
+        //adding section to the main
+        window.add(section,BorderLayout.NORTH);*/
