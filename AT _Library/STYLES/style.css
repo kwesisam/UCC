@@ -1,0 +1,42 @@
+.school_name{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.navigation{
+    display:  flex;
+    justify-content: space-between;
+    background-color: rgb(194, 194, 11);
+    padding: 5px;
+    height: 45px;
+}
+
+.online a{
+    text-decoration: none;
+    background-color: white;
+    padding: 5px 10px;
+    display: inline;
+    position: relative;
+    top: 5px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.online a:hover{
+    background-color: blue;
+    transition-delay: 0.2s;
+    color: white;
+}
+
+.school_logo img{
+    height: 35px;
+    width: 35 px;
+}
+
+.nav_left{
+    display: flex;
+}
+
+.main_body{
+    height: 619px;
+    background-repeat: no-repeat;
+}
